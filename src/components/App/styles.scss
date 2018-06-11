@@ -1,5 +1,91 @@
+@import 'css/global/colors';
+
 .root {
-  background: #ccc;
+  background: $grey5;
   width: 100%;
   height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    background: white;
+    border-radius: 5px;
+    border: 1px solid $grey4;
+    width: 50%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .chat {
+      width: 100%;
+      height: 500px;
+
+      .header {
+
+      }
+    }
+
+    .formContainer {
+      height: 60px;
+      width: 100%;
+      border-top: 1px solid $grey4;
+      background: $grey5;
+      padding: 10px;
+
+      .form {
+        height: 100%;
+        position: relative;
+
+        .input {
+          background: white;
+          border-radius: 5px;
+          border: 2px solid $grey4;
+          box-sizing: border-box;
+          color: $grey1;
+          height: 100%;
+          font-size: .85em;
+          transition: border-color .1s ease;
+          width: 100%;
+          padding: 0 74px 0 10px;
+
+          outline: none;
+
+          &:focus {
+            border-color: $brand;
+            color: $grey1;
+
+            &.select {
+              background-image: linear-gradient(45deg, transparent 50%, $brand 50%), linear-gradient(135deg, $brand 50%, transparent 50%);
+            }
+          }
+        }
+
+        .submit {
+          position: absolute;
+          top: 2px;
+          right: 2px;
+          height: 35px;
+
+          background: linear-gradient(180deg, $brand 0%, lighten($brand, 10%) 100%);
+          border-radius: 0 2px 2px 0;
+          border: none;
+          box-sizing: border-box;
+          color: white;
+          cursor: pointer;
+          display: block;
+          font-size: 0.75em;
+          font-weight: 600;
+          outline: none;
+          padding: 0 15px;
+          text-align: center;
+          text-decoration: none;
+          text-shadow: 0 0 1px darken($brand, 10%);
+        }
+      }
+    }
+  }
 }
