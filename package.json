@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rimraf dist && webpack-dev-server --config configs/webpack.dev.js --inline --progress --port 3000",
+    "start": "rimraf dist && webpack-dev-server --config configs/webpack.dev.js --inline --progress --port 4000",
     "build": "rimraf dist && webpack --config configs/webpack.production.js --progress --profile --bail --release"
   },
   "author": "Gerard Clos <clos.gerard@gmail.com>",
@@ -13,7 +13,8 @@
   "dependencies": {
     "mobx": "^5.0.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "socket.io-client": "^2.1.1"
   },
   "devDependencies": {
     "babel": "^6.23.0",
