@@ -26,6 +26,10 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['flow', 'env', 'react'],
+          plugins: [
+            "transform-decorators-legacy",
+            ["transform-class-properties", { "loose": true}]
+          ]
         }
       },
       {
