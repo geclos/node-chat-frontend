@@ -21,7 +21,7 @@ class Messages {
 
   @action
   save (message: Message) {
-    io.emit('chat message', message.message, () => this.messages.push(message))
+    io.emit('message', message.message, () => this.messages.push(message))
   }
 }
 
