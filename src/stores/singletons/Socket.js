@@ -5,7 +5,7 @@ class Socket {
   @observable socket = null
 
   constructor () {
-    this.socket = io('http://localhost:3000')
+    this.socket = io({ path: '/hapi' })
 
     this.socket.on('connect', () => console.log('connected'))
     this.socket.on('disconnect', () => console.log('disconnected'))

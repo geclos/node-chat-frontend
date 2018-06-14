@@ -9,12 +9,18 @@ module.exports = webpackMerge(commonConfig, {
   output: {
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
-    publicPath: 'http://localhost:4000/',
+    publicPath: '/',
     path: path.resolve(__dirname, '../dist')
   },
 
   devServer: {
     historyApiFallback: true,
-    stats: 'minimal'
+    stats: 'minimal',
+    proxy: {
+      '/hapi/*': {
+        target: 'ws://localhost:3000',
+        ws: true
+      }
+    }
   }
 })

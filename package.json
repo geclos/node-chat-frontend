@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rimraf dist && webpack-dev-server --config configs/webpack.dev.js --inline --progress --port 4000",
+    "start": "rimraf dist && webpack-dev-server --config configs/webpack.dev.js --inline --progress --port 4000 --host 0.0.0.0",
     "build": "rimraf dist && webpack --config configs/webpack.production.js --progress --profile --bail --release"
   },
   "author": "Gerard Clos <clos.gerard@gmail.com>",
